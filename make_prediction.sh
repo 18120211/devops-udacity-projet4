@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# URL=http://192.168.65.130:30394
-URL=http://localhost:5000
+URL=http://192.168.65.130:31235
 
 # POST method predict
 curl -d '{  
