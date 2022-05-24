@@ -1,6 +1,4 @@
-<include a CircleCI status badge, here>
-
-[![18120211](https://circleci.com/gh/18120211/DevOps_Microservices.svg?style=svg)](https://circleci.com/gh/18120211/DevOps_Microservices)
+[![18120211](https://circleci.com/gh/18120211/devops-udacity-projet4.svg?style=svg)](https://circleci.com/gh/18120211/devops-udacity-projet4)
 
 ## Project Overview
 
@@ -42,7 +40,7 @@ source .devops/bin/activate
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
+3. Run in Kubernetes:  `./run_kubernetes.sh`. Make sure you have connected to your K8s cluster
 
 ### Kubernetes Steps
 
@@ -50,3 +48,8 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Addional
+1. **Prediction**: After run `./run_kubernetes.sh`. You use the command `kubectl get svc` or look in `kubernetes.out` to find the exposed port. Then you go to the file `./make_prediction.sh` and edit the `URL` variable. In this case, It  happen to be `http://192.168.65.130:31235`. Finally run the script `./make_prediction.sh`
+2. **Build Docker Image**: Run the command `docker run -t [YourTag] .` 
+3. **Upload Docker Image**: After building your docker container successfully. You go to the file `./upload_docker.sh` and edit the `dockerpath`, and the username of your dockerhub account. Finally run the script `./upload_docker.sh`
