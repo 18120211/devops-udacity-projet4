@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --upgrade pip &&\
+# hadolint ignore=DL3013
+RUN pip3 install --upgrade pip &&\
      pip3 install -r requirements.txt
 
-# hadolint ignore=DL3013
 RUN wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
           chmod +x /bin/hadolint
 

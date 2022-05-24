@@ -1,5 +1,13 @@
 <include a CircleCI status badge, here>
 
+[![<ORG_NAME>](https://circleci.com/gh/18120211/DevOps_Microservices.svg?style=svg)](<LINK>)
+
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
+
+# Example for specific branch:
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs/?branch=teesloane-patch-5)
+
+
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
