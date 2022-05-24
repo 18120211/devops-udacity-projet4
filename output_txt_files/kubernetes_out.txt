@@ -1,1 +1,60 @@
-<paste log output from Kubernetes-mediated prediction, here>
+pod/udacity created
+NAME      READY   STATUS              RESTARTS   AGE
+udacity   0/1     ContainerCreating   0          0s
+Name:         udacity
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.65.130
+Start Time:   Tue, 24 May 2022 22:43:25 +0700
+Labels:       run=udacity
+Annotations:  <none>
+Status:       Pending
+IP:           
+IPs:          <none>
+Containers:
+  udacity:
+    Container ID:   
+    Image:          18120211/udacity-project4
+    Image ID:       
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Waiting
+      Reason:       ContainerCreating
+    Ready:          False
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-x8265 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-x8265:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  5m27s  default-scheduler  Successfully assigned default/udacity to minikube
+  Normal  Pulling    5m26s  kubelet            Pulling image "18120211/udacity-project4"
+service/udacity exposed
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          4m23s
+udacity      NodePort    10.100.141.207   <none>        5000:30621/TCP   2m13s
+
+{"prediction":[20.35373177134412]}
+{"prediction":[20.35373177134412]}
+{"prediction":[20.35373177134412]}
+{"prediction":[20.35373177134412]}
+<h3>Sklearn Prediction Home</h3>
+<h3>Sklearn Prediction Home</h3>
